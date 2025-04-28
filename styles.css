@@ -1,6 +1,6 @@
 * {
 	font-family: Arial;
-	color: #666666;
+	color: black;
 }
 
 /* HEADINGS **************************************************************************************/
@@ -31,6 +31,9 @@ a {
 }
 a:hover {
 	background-color: #2B578333;
+}
+strong {
+    color: #2b5873;
 }
 
 @media (min-width: 992px) {
