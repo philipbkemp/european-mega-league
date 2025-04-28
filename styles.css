@@ -40,6 +40,10 @@ a:hover {
 strong {
     color: #2b5873;
 }
+li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 
 @media (min-width: 992px) {
 	.row-cols-lg-10 > * {
