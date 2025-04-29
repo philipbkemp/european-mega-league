@@ -137,7 +137,7 @@ function parseWinners(data) {
                 .attr("data-bs-title",allCountries[country[0]])
         );
         thisClub.append(
-            $("<A></A>").attr("href","club.html?country="+country[0]+).html(country[0])
+            $("<A></A>").attr("href","club.html?country="+country[0]).html(country[0])
         );
         thisRow.append(thisCountry);
         thisRow.append(thisClub);
