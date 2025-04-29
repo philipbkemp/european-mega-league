@@ -18,7 +18,7 @@ function parseWinners(data) {
 
     countryData = {};
 
-    clubTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club");
+    clubTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club").addClass("winners--table");;
     clubHead = $("<THEAD></THEAD>");
     clubHeadRow = $("<TR></TR>")
         .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
@@ -107,7 +107,7 @@ function parseWinners(data) {
     });
     sortedCountries = Object.entries(countryData).sort(([, arrA], [, arrB]) => arrB.length - arrA.length);
 
-    countryTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club");
+    countryTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--country").addClass("winners--table");
     countryHead = $("<THEAD></THEAD>");
     countryHeadRow = $("<TR></TR>")
         .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
