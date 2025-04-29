@@ -1,3 +1,5 @@
+history.scrollRestoration = 'manual';
+
 allCountries = {
     "ALB": "Albania",
     "AND": "Andorra",
@@ -32,3 +34,10 @@ allCountries = {
     "UKR": "Ukraine",
     "WAL": "Wales"
 };
+
+$(document).ready(function(){
+	$('[data-bs-toggle="tooltip"]').tooltip({
+		container: '#theTabContent',
+		html: true
+	});
+});
