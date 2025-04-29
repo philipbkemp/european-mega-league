@@ -48,7 +48,7 @@ function parseWinners(data) {
                     .attr("data-bs-title",allCountries[club.country])
             );
             thisClub.append(
-                $("<A></A>").attr("href","club.html?country="+club.country+"&club="+club.club).html(club.name)
+                $("<A></A>").attr("href","club.html?country="+club.country.toLowerCase()+"&club="+club.club.toLowerCase()).html(club.name)
             );
             if ( ! countryData[club.country] ) {
                 countryData[club.country] = [];
@@ -67,7 +67,7 @@ function parseWinners(data) {
                 }
             });
             thisClub.append(
-                $("<A></A>").attr("href","club.html?country="+club.country_link+"&club="+club.club).html(club.name)
+                $("<A></A>").attr("href","club.html?country="+club.country_link.toLowerCase()+"&club="+club.club.toLowerCase()).html(club.name)
             );
         }
         thisRow.append(thisCountry);
@@ -136,7 +136,7 @@ function parseWinners(data) {
                 .attr("data-bs-title",allCountries[country[0]])
         );
         thisClub.append(
-            $("<A></A>").attr("href","club.html?country="+country[0]).html(allCountries[country[0]])
+            $("<A></A>").attr("href","club.html?country="+country[0].toLowerCase()).html(allCountries[country[0]])
         );
         thisRow.append(thisCountry);
         thisRow.append(thisClub);
