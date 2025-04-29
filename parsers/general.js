@@ -35,9 +35,9 @@ allCountries = {
     "WAL": "Wales"
 };
 
-$(document).ready(function(){
+function goTootlip() {
 	$('[data-bs-toggle="tooltip"]').tooltip({
 		container: '#theTabContent',
 		html: true
 	});
-});
+}

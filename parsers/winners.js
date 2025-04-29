@@ -99,6 +99,7 @@ function parseWinners(data) {
 
 	$(".placeholder-glow").addClass("d-none");
 	$(".displayAfterLoad").removeClass("d-none");
+    goTootlip();
 }
 
 
