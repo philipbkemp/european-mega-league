@@ -156,7 +156,7 @@ function parseWinners(data) {
         rowNum++;
     });
     countryTable.append(countryBody);
-    clubPanel.append(countryTable);
+    countryPanel.append(countryTable);
 
     $("#theTabContent").append(clubPanel);
     $("#theTabContent").append(countryPanel);
