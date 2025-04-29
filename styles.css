@@ -40,7 +40,7 @@ a:hover {
 strong {
     color: #2b5873;
 }
-li {
+li:not(.nav-item) {
     padding-bottom: 5px;
     padding-top: 5px;
 }
