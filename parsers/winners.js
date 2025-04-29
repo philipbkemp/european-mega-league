@@ -88,8 +88,6 @@ function parseWinners(data) {
         }
         thisRow.append(thisYears);
 
-        thisRow.append(thisClub);
-
         clubBody.append(thisRow);
         rowNum++;
     });
