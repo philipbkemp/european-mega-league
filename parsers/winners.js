@@ -81,7 +81,7 @@ function parseWinners(data) {
             club.years.forEach(yr=>{
                 thisYears.append(
                     $("<A></A>").attr("href","season.html?season="+yr).html(yr)
-                );
+                ).append(" ");;
                 countryData[club.country].push(yr);
             });
         } else {
@@ -89,7 +89,7 @@ function parseWinners(data) {
                 club["years_"+c.toLowerCase()].forEach(yr=>{
                     thisYears.append(
                         $("<A></A>").attr("href","season.html?season="+yr).html(yr)
-                    );
+                    ).append(" ");;
                     countryData[c].push(yr);
                 });
             });
@@ -148,7 +148,7 @@ function parseWinners(data) {
         country[1].forEach(yr=>{
             thisYears.append(
                 $("<A></A>").attr("href","season.html?season="+yr).html(yr)
-            );
+            ).append(" ");
         });
         thisRow.append(thisYears);
 
