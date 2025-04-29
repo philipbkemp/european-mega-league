@@ -102,7 +102,6 @@ function parseWinners(data) {
     clubTable.append(clubBody);
     clubPanel.append(clubTable);
 
-    console.log(countryData);
     Object.keys(countryData).forEach(c=>{
         countryData[c]
     });
