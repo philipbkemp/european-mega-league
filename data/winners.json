@@ -31,7 +31,7 @@
         { "count": 2, "club": "BAYRN", "country": "DEU", "name": "Bayern Munich", "years": ["2012-13","2013-14"] },
         { "count": 1, "club": "PRSTN", "country": "ENG", "name": "Preston North End", "years": ["1888-89"] },
         { "count": 1, "club": "RCBRX", "country": "BEL", "name": "Racing Club de Bruxelles", "years": ["1907-08"] },
-        { "count": 1, "club": "WIENR", "country": "AUS", "name": "Wiener AC", "years": ["1914-15"] },
+        { "count": 1, "club": "WIENR", "country": "AUT", "name": "Wiener AC", "years": ["1914-15"] },
         { "count": 1, "club": "USHBN", "country": "LUX", "name": "US Hollerich Bonnevoie", "years": ["1916-17"] },
         { "count": 1, "club": "SPRTA", "country": "CSK", "country_link": "CZE", "name": "Sparta Prague", "years": ["1926-27"] },
         { "count": 1, "club": "SLVIA", "country": "CSK", "country_link": "CZE", "name": "Slavia Prague", "years": ["1929-30"] },
