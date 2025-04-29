@@ -122,7 +122,7 @@ function parseWinners(data) {
     clubBody = $("<TBODY></TBODY>");
     rowNum = 1;
     sortedCountries.forEach(country=>{
-        thisRow = $("<TR></TR>").attr("id",country.toLowerCase());
+        thisRow = $("<TR></TR>").attr("id",country[0].toLowerCase());
 
         thisPos = $("<TD></TD>").addClass("d-none").addClass("d-sm-table-cell").html(rowNum);
         thisRow.append(thisPos);
