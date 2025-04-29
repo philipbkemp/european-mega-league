@@ -91,3 +91,45 @@ li:not(.nav-item) {
 .eml-tablist.nav-tabs .nav-link.active{
     border-bottom-color: white;
 }
+
+/* WINNERS TABLE - CLUBS *************************************************************************/
+table#winners--club thead tr th {
+    border-bottom: 3px solid #2b5873;
+    color: #2b5873;
+}
+table#winners--club tbody tr td {
+    padding: 10px 0;
+    vertical-align: middle;
+}
+table#winners--club tbody tr td:nth-of-type(1),
+table#winners--club tbody tr td:nth-of-type(3){
+    width: 50px;
+}
+table#winners--club tbody tr td:nth-of-type(2) {
+    width: 75px;
+}
+table#winners--club tbody tr td:nth-of-type(4) {
+    width: 720px;
+}
+table#winners--club tbody tr th {
+    width: calc( 100% - 50px - 75px - 50px - 720px );
+}
+table#winners--club tbody tr td:nth-of-type(1) {
+    font-size: 0.7rem;
+    text-align: center;
+}
+table#winners--club tbody tr td img {
+    height: 25px;
+}
+table#winners--club tbody tr td img:not(.first-of-type) {
+    margin-left: 10px;
+}
+table#winners--club tbody tr th a {
+    display: block;
+    padding: 6px;
+    text-decoration: none;
+}
+table#winners--club tbody tr td a {
+    padding: 6px;
+    text-decoration: none;
+}

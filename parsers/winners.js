@@ -24,7 +24,7 @@ function parseWinners(data) {
         .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
         .append( $("<TH></TH>").attr("scope","col").html("") )
         .append( $("<TH></TH>").attr("scope","col").html("Team") )
-        .append( $("<TH></TH>").attr("scope","col").html("Titles") )
+        .append( $("<TH></TH>").attr("scope","col").addClass("text-center").html("Titles") )
         .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
         ;
     clubHead.append(clubHeadRow);
