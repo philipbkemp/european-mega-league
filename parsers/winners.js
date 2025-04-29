@@ -19,6 +19,38 @@ function parseWinners(data) {
     clubPanel.html("Clubs here");
     countryPanel.html("Countries here");
 
+    clubTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club");
+    clubHead = $("<THEAD></THEAD>");
+    clubHeadRow = $("<TR></TR>")
+        .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
+        .append( $("<TH></TH>").attr("scope","col").html("") )
+        .append( $("<TH></TH>").attr("scope","col").html("Team") )
+        .append( $("<TH></TH>").attr("scope","col").html("Titles") )
+        .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
+        ;
+    clubHead.append(clubHeadRow);
+    clubTable.append(clubHead);
+    clubBody = $("<TBODY></TBODY>");
+    console.log(data);
+    clubTable.append(clubBody);
+    clubPanel.append(clubTable);
+/*<table class="table table-hover table-sm" id="club-winners">
+						<thead>
+							<tr>
+								<th scope="col" class="d-none d-sm-table-cell"></th>
+								<th scope="col"></th>
+								<th scope="col">Team</th>
+								<th scope="col">Titles</th>
+								<th scope="col" class="d-none d-sm-table-cell"></th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<tr id="linfield_fc"><td class="d-none d-sm-table-cell">1</td><td><img src="flags/EIR.png" alt="Ireland" data-bs-toggle="tooltip" data-bs-title="Ireland"><img class="ms-1" src="flags/NIR.png" alt="Northern Ireland" data-bs-toggle="tooltip" data-bs-title="Northern Ireland"></td><th><a href="clubs/nir/linfield_fc.html">Linfield</a></th><td class="text-center">6</td><td class="d-none d-sm-table-cell"><a href="18/9/1-92.html" class="me-2">1891-92</a><a href="19/0/3-04.html" class="me-2">1903-04</a><a href="19/5/5-56.html" class="me-2">1955-56</a><a href="19/7/0-71.html" class="me-2">1970-71</a><a href="19/7/7-78.html" class="me-2">1977-78</a><a href="19/8/3-84.html" class="me-2">1983-84</a></td></tr>
+							<tr id="knattspyrnufelagio_fram"><td class="d-none d-sm-table-cell">2</td><td><img src="flags/ISL.png" alt="Iceland" data-bs-toggle="tooltip" data-bs-title="Iceland"></td><th><a href="clubs/isl/knattspyrnufelagio_fram.html">Fram</a></th><td class="text-center">6</td><td class="d-none d-sm-table-cell"><a href="19/1/5-16.html" class="me-2">1915-16</a><a href="19/1/7-18.html" class="me-2">1917-18</a><a href="19/1/8-19.html" class="me-2">1918-19</a><a href="19/2/1-22.html" class="me-2">1921-22</a><a href="19/2/2-23.html" class="me-2">1922-23</a><a href="19/2/3-24.html" class="me-2">1923-24</a></td></tr>
+                            </tbody>
+						</table>*/
+
     $("#theTabContent").append(clubPanel);
     $("#theTabContent").append(countryPanel);
 
