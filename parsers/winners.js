@@ -79,7 +79,7 @@ function parseWinners(data) {
             });
         } else {
             club.country.forEach(c=>{
-                club["years_"+c].forEach(yr=>{
+                club["years_"+c.toLowerCase()].forEach(yr=>{
                     thisYears.append(
                         $("<A></A>").attr("href","season.html?season="+yr).html(yr)
                     );
