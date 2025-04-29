@@ -1,6 +1,6 @@
 {
     "winners": [
-        { "count": 6, "club": "LNFLD", "country": ["EIR","IRL"], "name": "Linfield", "years_eir": ["1891-92","1903-04"], "years_irl": ["1955-56","1970-71","1977-78","1983-84"] },
+        { "count": 6, "club": "LNFLD", "country": ["EIR","NIR"], "country_link": "NIR", "name": "Linfield", "years_eir": ["1891-92","1903-04"], "years_nir": ["1955-56","1970-71","1977-78","1983-84"] },
         { "count": 6, "club": "KFRAM", "country": "ISL", "name": "Fram", "years": ["1915-16","1917-18","1918-19","1921-22","1922-23","1923-24"] },
         { "count": 5, "club": "KJHVN", "country": "DNK", "name": "Kjøbenhavns Boldklub", "years": ["1890-91","1896-97","1897-98","1904-05","1910-11"] },
         { "count": 5, "club": "VALUR", "country": "ISL", "name": "Valur", "years": ["1933-34","1937-38","1943-44","1945-46","1978-79"] },
@@ -33,8 +33,8 @@
         { "count": 1, "club": "RCBRX", "country": "BEL", "name": "Racing Club de Bruxelles", "years": ["1907-08"] },
         { "count": 1, "club": "WIENR", "country": "AUS", "name": "Wiener AC", "years": ["1914-15"] },
         { "count": 1, "club": "USHBN", "country": "LUX", "name": "US Hollerich Bonnevoie", "years": ["1916-17"] },
-        { "count": 1, "club": "SPRTA", "country": "CSK", "name": "Sparta Prague", "years": ["1926-27"] },
-        { "count": 1, "club": "SLVIA", "country": "CSK", "name": "Slavia Prague", "years": ["1929-30"] },
+        { "count": 1, "club": "SPRTA", "country": "CSK", "country_link": "CZE", "name": "Sparta Prague", "years": ["1926-27"] },
+        { "count": 1, "club": "SLVIA", "country": "CSK", "country_link": "CZE", "name": "Slavia Prague", "years": ["1929-30"] },
         { "count": 1, "club": "BKFRM", "country": "DNK", "name": "Boldklubben Frem", "years": ["1930-31"] },
         { "count": 1, "club": "RBDIF", "country": "LUX", "name": "FA Red Boys Differdange", "years": ["1932-33"] },
         { "count": 1, "club": "RPDWN", "country": "AUT", "name": "SK Rapid Wien", "years": ["1934-35"] },
