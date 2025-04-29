@@ -119,7 +119,7 @@ function parseWinners(data) {
         ;
     countryHead.append(countryHeadRow);
     countryTable.append(countryHead);
-    clubBody = $("<TBODY></TBODY>");
+    countryBody = $("<TBODY></TBODY>");
     rowNum = 1;
     sortedCountries.forEach(country=>{
         thisRow = $("<TR></TR>").attr("id",country[0].toLowerCase());
@@ -137,7 +137,7 @@ function parseWinners(data) {
                 .attr("data-bs-title",allCountries[country[0]])
         );
         thisClub.append(
-            $("<A></A>").attr("href","club.html?country="+country[0]).html(country[0])
+            $("<A></A>").attr("href","club.html?country="+country[0]).html(allCountries[country[0]])
         );
         thisRow.append(thisCountry);
         thisRow.append(thisClub);
@@ -153,10 +153,10 @@ function parseWinners(data) {
         });
         thisRow.append(thisYears);
 
-        clubBody.append(thisRow);
+        countryBody.append(thisRow);
         rowNum++;
     });
-    countryTable.append(clubBody);
+    countryTable.append(countryBody);
     clubPanel.append(countryTable);
 
     $("#theTabContent").append(clubPanel);
