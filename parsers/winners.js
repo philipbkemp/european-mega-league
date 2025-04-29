@@ -71,11 +71,21 @@ function parseWinners(data) {
         thisRow.append(thisCount);
 
         thisYears = $("<TD></TD>").addClass("d-none").addClass("d-sm-table-cell");
-        club.years.forEach(yr=>{
-            thisYears.append(
-                $("<A></A>").attr("href","season.html?season="+yr).html(yr)
-            );
-        });
+        if ( ! Array.isArray(club.country) ) {
+            club.years.forEach(yr=>{
+                thisYears.append(
+                    $("<A></A>").attr("href","season.html?season="+yr).html(yr)
+                );
+            });
+        } else {
+            club.country.forEach(c=>{
+                club["years_"+c].forEach(yr=>{
+                    thisYears.append(
+                        $("<A></A>").attr("href","season.html?season="+yr).html(yr)
+                    );
+                });
+            });
+        }
         thisRow.append(thisYears);
 
         thisRow.append(thisClub);
