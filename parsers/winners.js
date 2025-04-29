@@ -16,7 +16,6 @@ function parseWinners(data) {
     clubPanel = buildTabPanel("clubs",true);
     countryPanel = buildTabPanel("countries");
 
-    clubPanel.html("Clubs here");
     countryPanel.html("Countries here");
 
     clubTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club");
@@ -31,25 +30,61 @@ function parseWinners(data) {
     clubHead.append(clubHeadRow);
     clubTable.append(clubHead);
     clubBody = $("<TBODY></TBODY>");
-    console.log(data);
+    rowNum = 1;
+    data.winners.forEach(club=>{
+        thisRow = $("<TR></TR>").attr("id",club.club);
+
+        thisPos = $("<TD></TD>").addClass("d-none").addClass("d-sm-table-cell").html(rowNum);
+        thisRow.append(thisPos);
+
+        thisCountry = $("<TD></TD>");
+        thisClub = $("<TH></TH>").attr("scope","row");
+        if ( ! Array.isArray(club.country) ) {
+            thisCountry.append(
+                $("<IMG />")
+                    .attr("src","flags/"+club.country+".png")
+                    .attr("alt",allCountries[club.country])
+                    .attr("data-bs-toggle","tooltip")
+                    .attr("data-bs-title",allCountries[club.country])
+            );
+            thisClub.append(
+                $("<A></A>").attr("href","club.html?country="+club.country+"&club="+club.club).html(club.name)
+            );
+        } else {
+            club.country.forEach(c=>{
+                thisCountry.append(
+                    $("<IMG />")
+                        .attr("src","flags/"+c+".png")
+                        .attr("alt",allCountries[c])
+                        .attr("data-bs-toggle","tooltip")
+                        .attr("data-bs-title",allCountries[c])
+                );
+            });
+            thisClub.append(
+                $("<A></A>").attr("href","club.html?country="+club.country_link+"&club="+club.club).html(club.name)
+            );
+        }
+        thisRow.append(thisCountry);
+        thisRow.append(thisClub);
+
+        thisCount = $("<TD></TD>").addClass("text-center").html(club.count);
+        thisRow.append(thisCount);
+
+        thisYears = $("<TD></TD>").addClass("d-none").addClass("d-sm-table-cell");
+        club.years.forEach(yr=>{
+            thisYears.append(
+                $("<A></A>").attr("href","season.html?season="+yr).html(yr)
+            );
+        });
+        thisRow.append(thisYears);
+
+        thisRow.append(thisClub);
+
+        clubBody.append(thisRow);
+        rowNum++;
+    });
     clubTable.append(clubBody);
     clubPanel.append(clubTable);
-/*<table class="table table-hover table-sm" id="club-winners">
-						<thead>
-							<tr>
-								<th scope="col" class="d-none d-sm-table-cell"></th>
-								<th scope="col"></th>
-								<th scope="col">Team</th>
-								<th scope="col">Titles</th>
-								<th scope="col" class="d-none d-sm-table-cell"></th>
-							</tr>
-						</thead>
-						<tbody>
-							
-							<tr id="linfield_fc"><td class="d-none d-sm-table-cell">1</td><td><img src="flags/EIR.png" alt="Ireland" data-bs-toggle="tooltip" data-bs-title="Ireland"><img class="ms-1" src="flags/NIR.png" alt="Northern Ireland" data-bs-toggle="tooltip" data-bs-title="Northern Ireland"></td><th><a href="clubs/nir/linfield_fc.html">Linfield</a></th><td class="text-center">6</td><td class="d-none d-sm-table-cell"><a href="18/9/1-92.html" class="me-2">1891-92</a><a href="19/0/3-04.html" class="me-2">1903-04</a><a href="19/5/5-56.html" class="me-2">1955-56</a><a href="19/7/0-71.html" class="me-2">1970-71</a><a href="19/7/7-78.html" class="me-2">1977-78</a><a href="19/8/3-84.html" class="me-2">1983-84</a></td></tr>
-							<tr id="knattspyrnufelagio_fram"><td class="d-none d-sm-table-cell">2</td><td><img src="flags/ISL.png" alt="Iceland" data-bs-toggle="tooltip" data-bs-title="Iceland"></td><th><a href="clubs/isl/knattspyrnufelagio_fram.html">Fram</a></th><td class="text-center">6</td><td class="d-none d-sm-table-cell"><a href="19/1/5-16.html" class="me-2">1915-16</a><a href="19/1/7-18.html" class="me-2">1917-18</a><a href="19/1/8-19.html" class="me-2">1918-19</a><a href="19/2/1-22.html" class="me-2">1921-22</a><a href="19/2/2-23.html" class="me-2">1922-23</a><a href="19/2/3-24.html" class="me-2">1923-24</a></td></tr>
-                            </tbody>
-						</table>*/
 
     $("#theTabContent").append(clubPanel);
     $("#theTabContent").append(countryPanel);
