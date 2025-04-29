@@ -74,3 +74,20 @@ li {
 .alert-danger {
     border-color: #58151C;
 }
+
+/* TABS ******************************************************************************************/
+.eml-tablist .nav-item button {
+    color: #2b5873;
+    min-width: 150px;
+}
+
+.eml-tablist.nav-tabs,
+.eml-tablist.nav-tabs .nav-link.active,
+.eml-tablist.nav-tabs .nav-link:focus,
+.eml-tablist.nav-tabs .nav-link:hover {
+    border-color: #2b5873;
+}
+
+.eml-tablist.nav-tabs .nav-link.active{
+    border-bottom-color: white;
+}
