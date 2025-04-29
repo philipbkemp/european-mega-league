@@ -16,7 +16,7 @@ function parseWinners(data) {
     clubPanel = buildTabPanel("clubs",true);
     countryPanel = buildTabPanel("countries");
 
-    countryPanel.html("Countries here");
+    countryData = {};
 
     clubTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club");
     clubHead = $("<THEAD></THEAD>");
@@ -50,6 +50,9 @@ function parseWinners(data) {
             thisClub.append(
                 $("<A></A>").attr("href","club.html?country="+club.country+"&club="+club.club).html(club.name)
             );
+            if ( ! countryData[club.country] ) {
+                countryData[club.country] = [];
+            }
         } else {
             club.country.forEach(c=>{
                 thisCountry.append(
@@ -59,6 +62,9 @@ function parseWinners(data) {
                         .attr("data-bs-toggle","tooltip")
                         .attr("data-bs-title",allCountries[c])
                 );
+                if ( ! countryData[c] ) {
+                    countryData[c] = [];
+                }
             });
             thisClub.append(
                 $("<A></A>").attr("href","club.html?country="+club.country_link+"&club="+club.club).html(club.name)
@@ -76,6 +82,7 @@ function parseWinners(data) {
                 thisYears.append(
                     $("<A></A>").attr("href","season.html?season="+yr).html(yr)
                 );
+                countryData[club.country].push(yr);
             });
         } else {
             club.country.forEach(c=>{
@@ -83,6 +90,7 @@ function parseWinners(data) {
                     thisYears.append(
                         $("<A></A>").attr("href","season.html?season="+yr).html(yr)
                     );
+                    countryData[c].push(yr);
                 });
             });
         }
@@ -93,6 +101,8 @@ function parseWinners(data) {
     });
     clubTable.append(clubBody);
     clubPanel.append(clubTable);
+
+    console.log(countryData);
 
     $("#theTabContent").append(clubPanel);
     $("#theTabContent").append(countryPanel);
