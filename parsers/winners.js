@@ -103,6 +103,61 @@ function parseWinners(data) {
     clubPanel.append(clubTable);
 
     console.log(countryData);
+    Object.keys(countryData).forEach(c=>{
+        countryData[c]
+    });
+    sortedCountries = Object.entries(countryData).sort(([, arrA], [, arrB]) => arrB.length - arrA.length);
+
+    countryTable = $("<TABLE></TABLE>").addClass("table").addClass("table-hover").addClass("table-sm").attr("id","winners--club");
+    countryHead = $("<THEAD></THEAD>");
+    countryHeadRow = $("<TR></TR>")
+        .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
+        .append( $("<TH></TH>").attr("scope","col").html("") )
+        .append( $("<TH></TH>").attr("scope","col").html("Country") )
+        .append( $("<TH></TH>").attr("scope","col").addClass("text-center").html("Titles") )
+        .append( $("<TH></TH>").attr("scope","col").addClass("d-none").addClass("d-sm-table-cell").html("") )
+        ;
+    countryHead.append(countryHeadRow);
+    countryTable.append(countryHead);
+    clubBody = $("<TBODY></TBODY>");
+    rowNum = 1;
+    sortedCountries.forEach(country=>{
+        thisRow = $("<TR></TR>").attr("id",country.toLowerCase());
+
+        thisPos = $("<TD></TD>").addClass("d-none").addClass("d-sm-table-cell").html(rowNum);
+        thisRow.append(thisPos);
+
+        thisCountry = $("<TD></TD>");
+        thisClub = $("<TH></TH>").attr("scope","row");
+        thisCountry.append(
+            $("<IMG />")
+                .attr("src","flags/"+country[0]+".png")
+                .attr("alt",allCountries[country[0]])
+                .attr("data-bs-toggle","tooltip")
+                .attr("data-bs-title",allCountries[country[0]])
+        );
+        thisClub.append(
+            $("<A></A>").attr("href","club.html?country="+country[0]+).html(country[0])
+        );
+        thisRow.append(thisCountry);
+        thisRow.append(thisClub);
+
+        thisCount = $("<TD></TD>").addClass("text-center").html(country[1].length);
+        thisRow.append(thisCount);
+
+        thisYears = $("<TD></TD>").addClass("d-none").addClass("d-sm-table-cell");
+        country[1].forEach(yr=>{
+            thisYears.append(
+                $("<A></A>").attr("href","season.html?season="+yr).html(yr)
+            );
+        });
+        thisRow.append(thisYears);
+
+        clubBody.append(thisRow);
+        rowNum++;
+    });
+    countryTable.append(clubBody);
+    clubPanel.append(countryTable);
 
     $("#theTabContent").append(clubPanel);
     $("#theTabContent").append(countryPanel);
