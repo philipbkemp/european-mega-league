@@ -43,7 +43,7 @@ function goTootlip() {
 }
 
 urlParams = {};
-function checkParams(required) {
+function checkParams(required=[]) {
 	paramsOk = true;
 
 	queryString = window.location.search.replace("?","");
