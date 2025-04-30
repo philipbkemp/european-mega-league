@@ -41,3 +41,31 @@ function goTootlip() {
 		html: true
 	});
 }
+
+urlParams = {};
+function checkParams(required) {
+	paramsOk = true;
+
+	queryString = window.location.search.replace("?","");
+	if ( queryString === "" ) {
+		if ( required.length !== 0 ) {
+			invalid();
+			return false;
+		}
+	}
+	queryArray = queryString.split("&");
+	queryArray.forEach(q=>{
+		key = q.split("=")[0];
+		value =  q.split("=")[1];
+		urlParams[key] = value;
+	});
+	
+	required.forEach(q=>{
+		if ( ! urlParams[q] || urlParams[q] === "" ) {
+			invalid();
+			paramsOk = false;
+		}
+	});
+
+	return paramsOk;
+}
