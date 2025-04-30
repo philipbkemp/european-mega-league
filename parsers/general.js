@@ -36,10 +36,21 @@ allCountries = {
 };
 
 function goTootlip() {
-	$('[data-bs-toggle="tooltip"]').tooltip({
-		container: '#theTabContent, .country-list, .team-list',
-		html: true
-	});
+    containers = [];
+
+    if ( $("#tabContent").length !== 0 ) {
+        containers.push("#tabContent");
+    }
+    if ( $(".country-list").length !== 0 ) {
+        containers.push(".country-list");
+    }
+
+    if ( containers.length !== 0 ) {
+        $('[data-bs-toggle="tooltip"]').tooltip({
+            container: containers.join(", "),
+            html: true
+        });
+    }
 }
 
 urlParams = {};
