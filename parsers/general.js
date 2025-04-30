@@ -37,7 +37,7 @@ allCountries = {
 
 function goTootlip() {
 	$('[data-bs-toggle="tooltip"]').tooltip({
-		container: '#theTabContent',
+		container: '#theTabContent, .country-list, .team-list',
 		html: true
 	});
 }
