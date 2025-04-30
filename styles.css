@@ -140,3 +140,21 @@ table.winners--table#winners--country tbody tr td a {
 table.winners--table#winners--country tbody tr td:last-child {
     padding: 0;
 }
+
+/* COUNTRY and TEAM LISTS ************************************************************************/
+.country-list .btn,
+.team-list .btn {
+    line-height: 25px;
+}
+.country-list .btn img:nth-of-type(1),
+.team-list .btn img:nth-of-type(1) {
+    height: 25px;
+    float: left;
+}
+.country-list .btn img:nth-of-type(2),
+.team-list .btn img:nth-of-type(2) {
+    height: 15px;
+    float: right;
+    position: relative;
+    top: 4px;
+}
