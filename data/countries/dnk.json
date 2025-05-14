@@ -1,0 +1,13 @@
+{
+    "country": "dnk",
+    "name": "Denmark",
+    "league": "Superliga",
+    "current": [
+        {"code":"BRNDY","name":"Brøndby IF","missing":true}
+    ],
+    "former": [
+        {"code":"AKMSK","name":"Akademisk Boldklub","missing":true},
+        {"code":"BKFRM","name":"Boldklubben Frem","missing":true},
+        {"code":"KJHVN","name":"Kjøbenhavns Boldklub","missing":true}
+    ]
+}

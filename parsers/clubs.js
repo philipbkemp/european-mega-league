@@ -39,7 +39,7 @@ function setTitles(path,page) {
 
 function handleCountry(data) {
     $("#active-clubs").html(data.league);
-    setTitles("Clubs",[data.name]);
+    setTitles(["Clubs"],data.name);
     data.current.forEach(activeClub=>{
         clubWrap = $("<DIV></DIV>").addClass("col");
         clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+activeClub.code);
@@ -47,6 +47,16 @@ function handleCountry(data) {
             clubLink.addClass("opacity-50");
         }
         clubLink.append(activeClub.name);
+        clubWrap.append(clubLink);
+        $(".club-list--active").append(clubWrap);
+    });
+    data.former.forEach(formerClub=>{
+        clubWrap = $("<DIV></DIV>").addClass("col");
+        clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+formerClub.code);
+        if ( formerClub.missing ) {
+            clubLink.addClass("opacity-50");
+        }
+        clubLink.append(formerClub.name);
         clubWrap.append(clubLink);
         $(".club-list--active").append(clubWrap);
     });
