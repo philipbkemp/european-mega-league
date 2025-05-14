@@ -35,8 +35,20 @@ function parseSeason(data) {
         $("#goNext").addClass("disabled").attr("disabled","true");
     }
 
+    ["a","b","c","d","e","f","g","h"].forEach(div=>{
+        if ( data["division_"+div] ) {
+            handleDiv(data["division_"+div]);
+        } else {
+            $("#div"+div).addClass("disabled").attr("disabled","true");
+        }
+    });
+
     $("#divisionsNav").removeClass("d-none");
     $("#divisionsTables").removeClass("d-none");
     $(".placeholder-glow").addClass("d-none");
 
+}
+
+function handleDiv(teams) {
+    console.log(teams);
 }
