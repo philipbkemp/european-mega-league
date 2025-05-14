@@ -6,6 +6,7 @@ $(document).ready(function(){
 
         console.log("TODO: NEED CLUB");
         $("#show-error").removeClass("d-none");
+        $("#link-clubs").removeClass("d-none");
     
     } else if ( urlParams["country"] ) {
 
@@ -18,6 +19,7 @@ $(document).ready(function(){
                 $("#show-error").removeClass("d-none");
             }
 		});
+        $("#link-clubs").removeClass("d-none");
     
     } else {
 
