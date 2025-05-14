@@ -59,7 +59,7 @@ function handleDiv(id,teams) {
         thisTeamCountry = getCountry(team.club.country);
         thisTeam.append(
             $("<IMG />")
-                .attr("src","../../flags/"+team.club.country+".png")
+                .attr("src","flags/"+team.club.country+".png")
                 .attr("alt",thisTeamCountry)
                 .attr("data-bs-toggle","tooltip")
                 .attr("data-bs-title",thisTeamCountry)
