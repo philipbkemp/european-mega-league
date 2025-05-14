@@ -3,8 +3,7 @@
     "name": "Cyprus",
     "league": "First Division",
     "current": [
-        {"code":"APOEL","name":"APOEL FC","missing":true},
-        {"code":"OMNIA","name":"Omonia","missing":true}
+        {"code":"APOEL","name":"APOEL FC","missing":true}
     ],
     "former": [
     ]

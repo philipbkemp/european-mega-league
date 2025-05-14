@@ -1,0 +1,11 @@
+{
+    "country": "aut",
+    "name": "Austria",
+    "league": "Bundesliga",
+    "current": [
+        {"code":"RPDWN","name":"SK Rapid Wien","missing":true}
+    ],
+    "former": [
+        {"code":"WIENR","name":"Wiener AC","missing":true}
+    ]
+}

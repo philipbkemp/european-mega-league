@@ -5,8 +5,20 @@ $(document).ready(function(){
 	if ( urlParams["country"] && urlParams["club"] ) {
 
         console.log("TODO: NEED CLUB");
-        $("#show-error").removeClass("d-none");
-        $("#link-clubs").removeClass("d-none");
+
+        $.ajax({
+			url: "data/countries/"+urlParams["country"]+".json",
+			success: function(data) {
+				handleCountry(data);
+                $("#link-clubs").removeClass("d-none");
+                setTitles(["Clubs",data.name],urlParams["club"].toUpperCase());
+                $("#show-error").removeClass("d-none");
+			},
+            error: function(data) {
+                $("#show-error").removeClass("d-none");
+                $("#link-clubs").removeClass("d-none");
+            }
+		});
     
     } else if ( urlParams["country"] ) {
 
@@ -14,12 +26,13 @@ $(document).ready(function(){
 			url: "data/countries/"+urlParams["country"]+".json",
 			success: function(data) {
 				handleCountry(data);
+                $("#link-clubs").removeClass("d-none");
 			},
             error: function(data) {
                 $("#show-error").removeClass("d-none");
+                $("#link-clubs").removeClass("d-none");
             }
 		});
-        $("#link-clubs").removeClass("d-none");
     
     } else {
 

@@ -1,0 +1,13 @@
+{
+    "country": "csk",
+    "name": "Czechoslavkia",
+    "replacments": [
+        "cze",
+        "svk"
+    ],
+    "former": [
+        {"code":"SLVIA","name":"Slavia Prague","now":"cze","missing":true},
+        {"code":"SPRTA","name":"Sparta Prague","now":"cze","missing":true}
+        
+    ]
+}

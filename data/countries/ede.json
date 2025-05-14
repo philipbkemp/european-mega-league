@@ -1,0 +1,10 @@
+{
+    "country": "ede",
+    "name": "East Germany",
+    "former": [
+        {"code":"BDYNM","name":"Berliner FC Dynamo","missing":true}
+    ],
+    "replacments": [
+        "deu"
+    ]
+}

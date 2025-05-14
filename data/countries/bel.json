@@ -1,0 +1,11 @@
+{
+    "country": "bel",
+    "name": "Belgium",
+    "league": "Pro League",
+    "current": [
+        {"code":"USTGL","name":"Union Saint-Gilloise","missing":true}
+    ],
+    "former": [
+        {"code":"RCBRX","name":"Racing Club de Bruxelles","missing":true}
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "country": "deu",
+    "name": "Germany",
+    "league": "Bundesliga",
+    "current": [
+        {"code":"BAYRN","name":"Bayern Munich","missing":true}
+    ],
+    "former": [
+    ],
+    "previously": [
+        "ede",
+        "wde"
+    ]
+}

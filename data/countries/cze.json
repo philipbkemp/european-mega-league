@@ -1,0 +1,14 @@
+{
+    "country": "cze",
+    "name": "Czechia",
+    "league": "First League",
+    "current": [
+        {"code":"SLVIA","name":"Slavia Prague","missing":true},
+        {"code":"SPRTA","name":"Sparta Prague","missing":true}
+    ],
+    "former": [
+    ],
+    "previously": [
+        "csk"
+    ]
+}

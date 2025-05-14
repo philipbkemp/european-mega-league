@@ -1,0 +1,10 @@
+{
+    "country": "and",
+    "name": "Andorra",
+    "league": "Primera Divisió",
+    "current": [
+    ],
+    "former": [
+        {"code":"SJLIA","name":"Sant Julià","missing":true}
+    ]
+}
