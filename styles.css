@@ -158,3 +158,54 @@ table.winners--table#winners--country tbody tr td:last-child {
     position: relative;
     top: 4px;
 }
+
+/* SEASON DIVISION BUTTONS ***********************************************************************/
+@media (min-width: 576px) {
+    .row-cols-sm-8 > * {
+        flex: 0 0 auto;
+        width: 12.5%;
+    }
+}
+#divisions button,
+#divisions button * {
+    color: #2b5873;
+}
+#divisions button.active,
+#divisions button.active * {
+    color: white;
+}
+.btn-outline-dark.active {
+    background: #2b5873;
+    border-color: #2b5873;
+}
+#divisionsTables thead th:nth-of-type(3) { text-align: left; }
+#divisionsTables thead th { text-align: center; }
+#divisionsTables tbody td { width: 50px; text-align: center; }
+#divisionsTables tbody td:nth-of-type(1) { font-size: 0.6rem; vertical-align: middle; }
+#divisionsTables tbody td:nth-of-type(2) img { height: 20px; }
+#divisionsTables tbody tr.champion { background-color: #ffffe0; }
+#divisionsTables tbody tr.removed { background-color: #fd9292; }
+#divisionsTables tbody tr.promoted { background-color: #b5e9b5; }
+#divisionsTables tbody tr.relegated { background-color: #ffc9c9; }
+#divisionsTables tbody th img { height: 16px; float: right; position: relative; top: 3px; right: 5px; margin-left: 5px; cursor: help; width: 16px; }
+#divisionsTables tbody th { font-weight: normal; }
+#divisionsTables tbody tr th a { font-weight: bold; }
+#divisionsTables tbody th a { display: inline-block; width: 75%; }
+#divisionsTables thead tr th:nth-child(n+4):nth-child(-n+15),
+#divisionsTables tbody tr td:nth-child(n+4):nth-child(-n+15){ display: none; }
+@media (min-width: 576px) {
+    #divisionsTables thead tr th:nth-child(3),
+    #divisionsTables tbody tr th { display: table-cell !important; }
+}
+@media (min-width: 768px) {
+    #divisionsTables thead tr th:nth-child(n+4):nth-child(-n+10),
+    #divisionsTables tbody tr td:nth-child(n+4):nth-child(-n+10) { display: table-cell; }
+}
+@media (min-width: 992px) {
+    #divisionsTables thead tr th:nth-child(n+4):nth-child(-n+15),
+    #divisionsTables tbody tr td:nth-child(n+4):nth-child(-n+15) { display: table-cell !important; }
+}
+@media (min-width: 1200px) {
+    #divisionsTables thead tr th:nth-child(3),
+    #divisionsTables tbody tr th { display: table-cell !important; }
+}

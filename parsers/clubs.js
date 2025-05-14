@@ -43,15 +43,6 @@ $(document).ready(function(){
 
 });
 
-function setTitles(path,page) {
-    if ( path.length !== 0 ) {
-        $("h1 .eml").html(["European Mega League",...path].join(" / "));
-    } else {
-        $("h1 .eml").html(["European Mega League"].join(" / "));
-    }
-    $("h1 .mainTitle").html(page);
-}
-
 function handleCountry(data) {
     $("#active-clubs").html(data.league);
     setTitles(["Clubs"],data.name);

@@ -23,7 +23,20 @@ $(document).ready(function(){
 function parseSeason(data) {
 
     console.log(data);
-    
+
+    setTitles([],data.season);
+
+    $("#goPrev").html(data.prev).attr("href","season.html?season="+data.prev);
+    if ( data.prevMissing ) {
+        $("#goPrev").addClass("disabled").attr("disabled","true");
+    }
+    $("#goNext").html(data.next).attr("href","season.html?season="+data.next);
+    if ( data.nextMissing ) {
+        $("#goNext").addClass("disabled").attr("disabled","true");
+    }
+
+    $("#divisionsNav").removeClass("d-none");
+    $("#divisionsTables").removeClass("d-none");
     $(".placeholder-glow").addClass("d-none");
 
 }
