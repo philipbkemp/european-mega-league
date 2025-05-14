@@ -57,13 +57,13 @@ function handleDiv(id,teams) {
         thisTeam.append( $("<TD></TD>").html(team.place) );
 
         thisTeamCountry = getCountry(team.club.country);
-        thisTeam.append(
+        thisTeam.append( $("<TD></TD>").append(
             $("<IMG />")
                 .attr("src","flags/"+team.club.country+".png")
                 .attr("alt",thisTeamCountry)
                 .attr("data-bs-toggle","tooltip")
                 .attr("data-bs-title",thisTeamCountry)
-        );
+        ));
 
         $("tbody#league_"+id).append(thisTeam);
     });
