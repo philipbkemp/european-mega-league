@@ -8,22 +8,47 @@ $(document).ready(function(){
     
     } else if ( urlParams["country"] ) {
 
-        console.log("TODO: NEED COUNTRY");
+        $.ajax({
+			url: "data/teams.json",
+			success: function(data) {
+				handleCountry(data);
+			},
+            error: function(data) {
+                $("#show-error").removeClass("d-none");
+            }
+		});
     
     } else {
 
-        console.log("TODO: NEED INTRO");
         goTootlip();
+        $("#show-empty").removeClass("d-none");
+        setTitles([],"Clubs");
 
     }
-	
-	/*	$.ajax({
-			url: "data/teams.json",
-			success: function(data) {
-				parseTeams(data);
-			}
-		});
-
-	}*/
 
 });
+
+function setTitles(path,page) {
+    if ( path.length !== 0 ) {
+        $("h1 .eml").html(["European Mega League",...path].join(" / "));
+    } else {
+        $("h1 .eml").html(["European Mega League"].join(" / "));
+    }
+    $("h1 .mainTitle").html(page);
+}
+
+function handleCountry(data) {
+    $("#active-clubs").html(data.league);
+    setTitles("Clubs",[data.name]);
+    data.current.forEach(activeClub=>{
+        clubWrap = $("<DIV></DIV>").addClass("col");
+        clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+activeClub.code);
+        if ( activeClub.missing ) {
+            clubLink.addClass("opacity-50");
+        }
+        clubLink.append(activeClub.name);
+        clubWrap.append(clubLink);
+        $(".club-list--active").append(clubWrap);
+    });
+    $("#show-country").removeClass("d-none");
+}

@@ -12,11 +12,27 @@
 		<div class="container mt-3">
 			<h1 class="mb-3">
                 <span class="eml">European Mega League</span>
-                Clubs
+                <span class="mainTitle">Clubs</span>
                 <a href="index.html" class="float-end">Home</a>
             </h1>
 
-            <div class="row" id="show-empty">
+            <div class="row d-none" id="show-error">
+                <div class="col-12">
+                    <div class="alert alert-danger">Unable to load data</div>
+                </div>
+            </div>
+
+            <div class="row d-none" id="show-country">
+                <div class="col-12">
+                    <strong id="active-clubs"></strong>
+                </div>
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 club-list club-list--active">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-none" id="show-empty">
                 <div class="col-12">
                     <p>The 2024-25 season sees <strong>732</strong> teams take part. A total of 3,328 teams have taken part across all seasons.</p>
                 </div>

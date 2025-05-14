@@ -1,0 +1,11 @@
+{
+    "country": "nld",
+    "name": "Netherlands",
+    "league": "Eredivisie",
+    "current": [
+        {"code":"AAJAX","name":"AFC Ajax","missing":true}
+    ],
+    "former": {
+
+    }
+}
