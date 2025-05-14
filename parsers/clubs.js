@@ -4,15 +4,15 @@ $(document).ready(function(){
 
 	if ( urlParams["country"] && urlParams["club"] ) {
 
-        console.log("NEED CLUB");
+        console.log("TODO: NEED CLUB");
     
     } else if ( urlParams["country"] ) {
 
-        console.log("NEED COUNTRY");
+        console.log("TODO: NEED COUNTRY");
     
     } else {
 
-        console.log("NEED INTRO");
+        console.log("TODO: NEED INTRO");
         goTootlip();
 
     }
