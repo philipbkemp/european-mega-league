@@ -52,20 +52,26 @@ function parseSeason(data) {
 
 function handleDiv(id,teams) {
     teams.forEach(team=>{
-        thisTeam = $("<TR></TR>");
-
-        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p"]
+         supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags"]
         Object.keys(team).forEach(k=>{
             if ( ! supportedKeys.includes(k) ) {
                 console.error(k);
             }
         });
-        supportedClubKeys = ["country","name"];
+        supportedClubKeys = ["country","name","id"];
         Object.keys(team.club).forEach(ck=>{
             if ( ! supportedClubKeys.includes(ck) ) {
-                console.error(ck);
+                console.error("club",ck);
             }
         });
+        supportedFlagKeys = [];
+        Object.keys(team.flags).forEach(fk=>{
+            if ( ! supportedFlagKeys.includes(fk) ) {
+                console.error("flags",fk);
+            }
+        });
+
+        thisTeam = $("<TR></TR>").attr("id",team.club.id);
 
         thisTeam.append( $("<TD></TD>").html(team.place) );
 
