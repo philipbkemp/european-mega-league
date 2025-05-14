@@ -5,6 +5,7 @@ $(document).ready(function(){
 	if ( urlParams["country"] && urlParams["club"] ) {
 
         console.log("TODO: NEED CLUB");
+        $("#show-error").removeClass("d-none");
     
     } else if ( urlParams["country"] ) {
 
