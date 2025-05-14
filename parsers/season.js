@@ -65,6 +65,22 @@ function handleDiv(id,teams) {
                 .attr("data-bs-title",thisTeamCountry)
         ));
 
+        thisTeam.append( $("<TD></TD>").html(team.club.name) );
+
+        thisTeam.append( $("<TD></TD>").html(team.p) );
+        thisTeam.append( $("<TD></TD>").html(team.w) );
+        thisTeam.append( $("<TD></TD>").html(team.d) );
+        thisTeam.append( $("<TD></TD>").html(team.l) );
+        thisTeam.append( $("<TD></TD>").html(team.f) );
+        thisTeam.append( $("<TD></TD>").html(team.a) );
+        thisTeam.append( $("<TD></TD>").html(team.pts) );
+        thisTeam.append( $("<TD></TD>").html(team.gd) );
+        thisTeam.append( $("<TD></TD>").html(team.f_p) );
+        thisTeam.append( $("<TD></TD>").html(team.a_p) );
+        thisTeam.append( $("<TD></TD>").html(team.win_percent) );
+        thisTeam.append( $("<TD></TD>").html(team.gd_p) );
+        thisTeam.append( $("<TD></TD>").html(team.pts_p) );
+
         $("tbody#league_"+id).append(thisTeam);
     });
 }
