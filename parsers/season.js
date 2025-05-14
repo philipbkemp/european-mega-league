@@ -54,6 +54,19 @@ function handleDiv(id,teams) {
     teams.forEach(team=>{
         thisTeam = $("<TR></TR>");
 
+        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p"]
+        Object.keys(team).forEach(k=>{
+            if ( ! supportedKeys.includes(k) ) {
+                console.error(k);
+            }
+        });
+        supportedClubKeys = ["country","name"];
+        Object.keys(team.club).forEach(ck=>{
+            if ( ! supportedClubKeys.includes(ck) ) {
+                console.error(ck);
+            }
+        });
+
         thisTeam.append( $("<TD></TD>").html(team.place) );
 
         thisTeamCountry = getCountry(team.club.country);
