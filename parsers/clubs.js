@@ -9,7 +9,6 @@ $(document).ready(function(){
         $.ajax({
 			url: "data/countries/"+urlParams["country"]+".json",
 			success: function(data) {
-				handleCountry(data);
                 $("#link-clubs").removeClass("d-none");
                 setTitles(["Clubs",data.name],urlParams["club"].toUpperCase());
                 $("#show-error").removeClass("d-none");
