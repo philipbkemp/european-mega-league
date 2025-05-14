@@ -37,7 +37,7 @@ function parseSeason(data) {
 
     ["a","b","c","d","e","f","g","h"].forEach(div=>{
         if ( data["division_"+div] ) {
-            handleDiv(data["division_"+div]);
+            handleDiv(div,data["division_"+div]);
         } else {
             $("#div"+div).addClass("disabled").attr("disabled","true");
         }
@@ -49,6 +49,12 @@ function parseSeason(data) {
 
 }
 
-function handleDiv(teams) {
-    console.log(teams);
+function handleDiv(id,teams) {
+    teams.forEach(team=>{
+        thisTeam = $("<TR></TR>");
+
+        thisTeam.append( $("<TD></TD>").html(team.place) );
+
+        $("tbody#league_"+id).append(thisTeam);
+    });
 }
