@@ -9,7 +9,7 @@ $(document).ready(function(){
     } else if ( urlParams["country"] ) {
 
         $.ajax({
-			url: "data/teams.json",
+			url: "data/countries/"+urlParams["country"]+".json",
 			success: function(data) {
 				handleCountry(data);
 			},
