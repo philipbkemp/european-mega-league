@@ -4,7 +4,7 @@
     "prevMissing": true,
     "next": "1889-90",
     "division_a": [
-        {"division":"A","place":  1,"club":{"country":"ENG","id":"prstn","p":22,"w":18,"d": 4,"l": 0,"f": 74,"a": 15,"pts": 58,"gd": 59,"f_p":3.36,"a_p":0.68,"win_percent":0.82,"gd_p":2.68,"pts_p":2.64,"name":"Preston North End"},"flags":{"winner":true,"new_club":true,"domestic_champion":true}},
+        {"division":"A","place":  1,"club":{"country":"ENG","id":"prstn","name":"Preston North End"},"flags":{"winner":true,"new_club":true,"domestic_champion":true},"p":22,"w":18,"d":4,"l":0,"f":74,"a":15,"pts":58,"gd":59,"f_p":3.36,"a_p":0.68,"win_percent":0.82,"gd_p":2.68,"pts_p":2.64},
 		{"division":"A","place":  2,"club":{"country":"ENG","id":"Aston_Villa_F.C.","name":"Aston Villa"},"flags":{"new_club":true},"p":22,"w":12,"d":5,"l":5,"f":61,"a":43,"pts":41,"gd":18,"f_p":2.77,"a_p":1.95,"win_percent":0.55,"gd_p":0.82,"pts_p":1.86},
 		{"division":"A","place":  3,"club":{"country":"ENG","id":"Wolverhampton_Wanderers_F.C.","name":"Wolverhampton Wanderers"},"flags":{"new_club":true},"p":22,"w":12,"d":4,"l":6,"f":50,"a":37,"pts":40,"gd":13,"f_p":2.27,"a_p":1.68,"win_percent":0.55,"gd_p":0.59,"pts_p":1.82},
 		{"division":"A","place":  4,"club":{"country":"ENG","id":"Blackburn_Rovers_F.C.","name":"Blackburn Rovers"},"flags":{"new_club":true},"p":22,"w":10,"d":6,"l":6,"f":66,"a":45,"pts":36,"gd":21,"f_p":3,"a_p":2.05,"win_percent":0.45,"gd_p":0.95,"pts_p":1.64},
