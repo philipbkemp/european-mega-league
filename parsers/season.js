@@ -47,6 +47,7 @@ function parseSeason(data) {
     $("#divisionsTables").removeClass("d-none");
     $(".placeholder-glow").addClass("d-none");
 
+    goTootlip();
 }
 
 function handleDiv(id,teams) {
@@ -54,6 +55,15 @@ function handleDiv(id,teams) {
         thisTeam = $("<TR></TR>");
 
         thisTeam.append( $("<TD></TD>").html(team.place) );
+
+        thisTeamCountry = getCountry(team.club.country);
+        thisTeam.append(
+            $("<IMG />")
+                .attr("src","../../flags/"+team.club.country+".png")
+                .attr("alt",thisTeamCountry)
+                .attr("data-bs-toggle","tooltip")
+                .attr("data-bs-title",thisTeamCountry)
+        );
 
         $("tbody#league_"+id).append(thisTeam);
     });

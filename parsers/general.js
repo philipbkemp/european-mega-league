@@ -44,6 +44,9 @@ function goTootlip() {
     if ( $(".country-list").length !== 0 ) {
         containers.push(".country-list");
     }
+    if ( $("#divisionTables").length !== 0 ) {
+        containers.push("#divisionTables");
+    }
 
     if ( containers.length !== 0 ) {
         $('[data-bs-toggle="tooltip"]').tooltip({
@@ -91,4 +94,73 @@ function setTitles(path,page) {
     }
     $("h1 .mainTitle").html(page);
 
+}
+
+function getCountry(code) {
+    const countries = {
+        "alb": "Albania",
+        "and": "Andorra",
+        "arm": "Armenia",
+        "aut": "Austria",
+        "aze": "Azerbaijan",
+        "bel": "Belgium",
+        "bgr": "Bulgaria",
+        "bih": "Bosnia and Herzegovina",
+        "blr": "Belarus",
+        "che": "Switzerland",
+        "csk": "Czechoslovakia",
+        "cyp": "Cyprus",
+        "cze": "Czechia",
+        "ede": "East Germany",
+        "eir": "Ireland",
+        "eng": "England",
+        "esp": "Spain",
+        "est": "Estonia",
+        "deu": "Germany",
+        "dnk": "Denmark",
+        "fin": "Finland",
+        "fra": "France",
+        "fro": "Faroe Islands",
+        "geo": "Georgia",
+        "gib": "Gibraltar",
+        "grc": "Greece",
+        "hrv": "Croatia",
+        "hun": "Hungary",
+        "irl": "Republic of Ireland",
+        "isl": "Iceland",
+        "isr": "Israel",
+        "ita": "Italy",
+        "kaz": "Kazakhstan",
+        "kos": "Kosovo",
+        "ltu": "Lithuania",
+        "lux": "Luxembourg",
+        "lva": "Latvia",
+        "mda": "Moldova",
+        "mkd": "North Macedonia",
+        "mlt": "Malta",
+        "mne": "Montenegro",
+        "nir": "Northern Ireland",
+        "nld": "Netherlands",
+        "nor": "Norway",
+        "pol": "Poland",
+        "prt": "Portugal",
+        "pse": "Palestine",
+        "rou": "Romania",
+        "rus": "Russia",
+        "sam": "Serbia and Montegro",
+        "sco": "Scotland",
+        "smr": "San Marino",
+        "sov": "Soviet Union",
+        "srb": "Serbia",
+        "svk": "Slovakia",
+        "svn": "Slovenia",
+        "swe": "Sweden",
+        "tur": "Turkey",
+        "ukr": "Ukraine",
+        "wal": "Wales",
+        "wde": "West Germany",
+        "yug": "Yugoslavia"
+    };
+
+    return countries[code.toLowerCase()];
 }
