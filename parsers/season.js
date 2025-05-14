@@ -65,7 +65,7 @@ function handleDiv(id,teams) {
                 .attr("data-bs-title",thisTeamCountry)
         ));
 
-        thisTeam.append( $("<TD></TD>").html(team.club.name) );
+        thisTeam.append( $("<TH></TH>").attr("scope","row").html(team.club.name) );
 
         thisTeam.append( $("<TD></TD>").html(team.p) );
         thisTeam.append( $("<TD></TD>").html(team.w) );
