@@ -84,8 +84,11 @@ function checkParams(required=[]) {
 function setTitles(path,page) {
     if ( path.length !== 0 ) {
         $("h1 .eml").html(["European Mega League",...path].join(" / "));
+        $("head title").html(["European Mega League",...path,page].join(" / "));
     } else {
         $("h1 .eml").html(["European Mega League"].join(" / "));
+        $("head title").html(["European Mega League",page].join(" / "));
     }
     $("h1 .mainTitle").html(page);
+
 }

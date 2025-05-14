@@ -61,6 +61,9 @@ li:not(.nav-item) {
 	color: #2b5873;
 	border-color: #2b5873;
 }
+.btn.disabled {
+    opacity: 0.3;
+}
 
 /* ALERTS ****************************************************************************************/
 .alert-info {
