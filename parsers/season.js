@@ -75,11 +75,11 @@ function handleDiv(id,teams) {
         thisTeam.append( $("<TD></TD>").html(team.a) );
         thisTeam.append( $("<TD></TD>").html(team.pts) );
         thisTeam.append( $("<TD></TD>").html(team.gd) );
-        thisTeam.append( $("<TD></TD>").html(team.f_p) );
-        thisTeam.append( $("<TD></TD>").html(team.a_p) );
-        thisTeam.append( $("<TD></TD>").html(team.win_percent) );
-        thisTeam.append( $("<TD></TD>").html(team.gd_p) );
-        thisTeam.append( $("<TD></TD>").html(team.pts_p) );
+        thisTeam.append( $("<TD></TD>").html(team.f_p.toFixed(2)) );
+        thisTeam.append( $("<TD></TD>").html(team.a_p.toFixed(2)) );
+        thisTeam.append( $("<TD></TD>").html(team.win_percent.toFixed(2)) );
+        thisTeam.append( $("<TD></TD>").html(team.gd_p.toFixed(2)) );
+        thisTeam.append( $("<TD></TD>").html(team.pts_p.toFixed(2)) );
 
         $("tbody#league_"+id).append(thisTeam);
     });
