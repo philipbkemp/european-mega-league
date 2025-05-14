@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>European Mega League / </title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="styles.css" rel="stylesheet" />
+		<link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+	</head>
+	<body>
+		<div class="container mt-3">
+			<h1 class="mb-3">
+                <span class="eml">European Mega League</span>
+                
+                <a href="index.html" class="float-end">Home</a>
+            </h1>
+
+            <div class="placeholder-glow">
+                <div class="col-12 placeholder"></div>
+            </div>
+
+            <div class="row d-none" id="show-error">
+                <div class="col-12">
+                    <div class="alert alert-danger">Unable to load data</div>
+                </div>
+            </div>
+            
+            <div class="row pt-3 pb-3 d-none" id="divisionsNav">
+				<div class="col-6 col-sm-2 col-lg-1">
+					<a href="" class="btn btn-outline-dark w-100 px-md-0" id="goPrev"></a>
+				</div>
+				
+				<div class="col-12 col-sm-8 offset-lg-1 text-center order-3 order-sm-2" id="divisions" role="tablist">
+					<div class="row row-cols-4 row-cols-sm-8">
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1 active" id="diva" data-bs-toggle="tab" data-bs-target="#diva-pane" type="button" role="tab" aria-controls="diva" aria-selected="true">
+								<span class="d-none d-lg-inline-block me-1">Division</span>A
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="divb" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>B
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="divc" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>C
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="divd" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>D
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="dive" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>E
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="divf" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>F
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="divg" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>G
+							</button>
+						</div>
+						<div class="col mt-2 px-sm-1 mt-sm-0">
+							<button class="w-100 btn btn-outline-dark px-1" id="divh" type="button">
+								<span class="d-none d-lg-inline-block me-1">Division</span>H
+							</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-6 col-sm-2 col-lg-1 order-2 order-sm-3 offset-lg-1">
+					<a href="" class="btn btn-outline-dark w-100 px-md-0" id="goNext"></a>
+				</div>
+			</div>
+
+            <div class="tab-content d-none" id="divisionsTables">
+				<div class="tab-pane active show" id="diva-pane" role="tabpanel" aria-labelledby="diva" tabindex="0">
+					<div>
+						<table class="table table-hover table-sm">
+							<thead>
+								<tr><th scope="col"></th><th scope="col"></th><th scope="col" data-original-text="Team">Team</th><th scope="col">P</th><th scope="col">W</th><th scope="col">D</th><th scope="col">L</th><th scope="col">F</th><th scope="col">A</th><th scope="col">Pts</th><th scope="col">GD</th><th scope="col">F/P</th><th scope="col">A/P</th><th scope="col">W%</th><th scope="col">GD/P</th><th scope="col">Pts/P</th></tr>
+							</thead>
+							<tbody class="table-group-divider league" id="league_a">
+								
+                                <tr><td><div class="col-12 placeholder"></div></td></tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="parsers/general.js"></script>
+        <script src="parsers/season.js"></script>
+	</body>
+</html>

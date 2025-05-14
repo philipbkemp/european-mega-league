@@ -1,0 +1,20 @@
+{
+    "season": "1888-89",
+    "prev": "1887-88",
+    "prevMissing": true,
+    "next": "1889-90",
+    "division_a": [
+        {"division":"A","place":  1,"club":{"country":"ENG","id":"prstn","p":22,"w":18,"d": 4,"l": 0,"f": 74,"a": 15,"pts": 58,"gd": 59,"f_p":3.36,"a_p":0.68,"win_percent":0.82,"gd_p":2.68,"pts_p":2.64,"name":"Preston North End"},"flags":{"winner":true,"new_club":true,"domestic_champion":true}},
+		{"division":"A","place":  2,"club":{"country":"ENG","id":"Aston_Villa_F.C.","name":"Aston Villa"},"flags":{"new_club":true},"p":22,"w":12,"d":5,"l":5,"f":61,"a":43,"pts":41,"gd":18,"f_p":2.77,"a_p":1.95,"win_percent":0.55,"gd_p":0.82,"pts_p":1.86},
+		{"division":"A","place":  3,"club":{"country":"ENG","id":"Wolverhampton_Wanderers_F.C.","name":"Wolverhampton Wanderers"},"flags":{"new_club":true},"p":22,"w":12,"d":4,"l":6,"f":50,"a":37,"pts":40,"gd":13,"f_p":2.27,"a_p":1.68,"win_percent":0.55,"gd_p":0.59,"pts_p":1.82},
+		{"division":"A","place":  4,"club":{"country":"ENG","id":"Blackburn_Rovers_F.C.","name":"Blackburn Rovers"},"flags":{"new_club":true},"p":22,"w":10,"d":6,"l":6,"f":66,"a":45,"pts":36,"gd":21,"f_p":3,"a_p":2.05,"win_percent":0.45,"gd_p":0.95,"pts_p":1.64},
+		{"division":"A","place":  5,"club":{"country":"ENG","id":"Bolton_Wanderers_F.C.","name":"Bolton Wanderers"},"flags":{"new_club":true},"p":22,"w":10,"d":2,"l":10,"f":63,"a":59,"pts":32,"gd":4,"f_p":2.86,"a_p":2.68,"win_percent":0.45,"gd_p":0.18,"pts_p":1.45},
+		{"division":"A","place":  6,"club":{"country":"ENG","id":"West_Bromwich_Albion_F.C.","name":"West Bromwich Albion"},"flags":{"new_club":true},"p":22,"w":10,"d":2,"l":10,"f":40,"a":46,"pts":32,"gd":-6,"f_p":1.82,"a_p":2.09,"win_percent":0.45,"gd_p":-0.27,"pts_p":1.45},
+		{"division":"A","place":  7,"club":{"country":"ENG","id":"Everton_F.C.","name":"Everton"},"flags":{"new_club":true},"p":22,"w":9,"d":2,"l":11,"f":35,"a":46,"pts":29,"gd":-11,"f_p":1.59,"a_p":2.09,"win_percent":0.41,"gd_p":-0.5,"pts_p":1.32},
+		{"division":"A","place":  8,"club":{"country":"ENG","id":"Accrington_F.C.","name":"Accrington"},"flags":{"new_club":true},"p":22,"w":6,"d":8,"l":8,"f":48,"a":48,"pts":26,"gd":0,"f_p":2.18,"a_p":2.18,"win_percent":0.27,"gd_p":0,"pts_p":1.18},
+		{"division":"A","place":  9,"club":{"country":"ENG","id":"Burnley_F.C.","name":"Burnley"},"flags":{"new_club":true},"p":22,"w":7,"d":3,"l":12,"f":42,"a":62,"pts":24,"gd":-20,"f_p":1.91,"a_p":2.82,"win_percent":0.32,"gd_p":-0.91,"pts_p":1.09},
+		{"division":"A","place": 10,"club":{"country":"ENG","id":"Derby_County_F.C.","name":"Derby County"},"flags":{"new_club":true},"p":22,"w":7,"d":2,"l":13,"f":41,"a":61,"pts":23,"gd":-20,"f_p":1.86,"a_p":2.77,"win_percent":0.32,"gd_p":-0.91,"pts_p":1.05},
+		{"division":"A","place": 11,"club":{"country":"ENG","id":"Notts_County_F.C.","name":"Notts County"},"flags":{"new_club":true},"p":22,"w":5,"d":2,"l":15,"f":40,"a":73,"pts":17,"gd":-33,"f_p":1.82,"a_p":3.32,"win_percent":0.23,"gd_p":-1.5,"pts_p":0.77},
+		{"division":"A","place": 12,"club":{"country":"ENG","id":"Stoke_City_F.C.","name":"Stoke"},"flags":{"new_club":true},"p":22,"w":4,"d":4,"l":14,"f":26,"a":51,"pts":16,"gd":-25,"f_p":1.18,"a_p":2.32,"win_percent":0.18,"gd_p":-1.14,"pts_p":0.73}
+    ]
+}
