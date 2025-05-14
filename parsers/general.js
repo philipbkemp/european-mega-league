@@ -44,8 +44,8 @@ function goTootlip() {
     if ( $(".country-list").length !== 0 ) {
         containers.push(".country-list");
     }
-    if ( $("#divisionTables").length !== 0 ) {
-        containers.push("#divisionTables");
+    if ( $("#divisionsTables").length !== 0 ) {
+        containers.push("#divisionsTables");
     }
 
     if ( containers.length !== 0 ) {
