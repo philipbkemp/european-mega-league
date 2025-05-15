@@ -1,10 +1,10 @@
 {
-    "country": "cyp",
-    "name": "Cyprus",
-    "league": "First Division",
+    "country": "eng",
+    "name": "England",
+    "league": "Premier League",
     "current": [
-        {"code":"APOEL","name":"APOEL FC","missing":true}
     ],
     "former": [
+        {"code":"PRSTON","name":"Preston North End","missing":true,"id":"Preston_North_End_F.C."}
     ]
 }

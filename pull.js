@@ -6,6 +6,7 @@ function grabLeague(div) {
     league.forEach(row=>{
         cols = row.querySelectorAll("td,th");
         rowObj = {};
+        rowObj.division = div.toUpperCase();
         rowObj.place = parseInt(cols[0].textContent);
         rowObj.club = {};
         rowObj.club.country = cols[1].querySelector("img").getAttribute("src").split("/").pop().split(".")[0];
@@ -23,6 +24,7 @@ function grabLeague(div) {
             switch ( flag ) {
                 case "trophy": rowObj.flags.domestic_champion = true; break;
                 case "new": rowObj.flags.new_club = true; break;
+                case "removed": rowObj.flags.removed = true; break;
                 default: console.error("Unknown flag",flag);
             }
         });
@@ -46,5 +48,9 @@ function grabLeague(div) {
             out += ',\n';
         }
     };
+    out = out
+        .replace('"id":"preston_north_end_fc"','"id":"prstn"')
+        .replace('"id":"akademisk_boldklub"','"id":"akmsk"')
+        ;
     console.log( out );
 }

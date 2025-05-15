@@ -1,0 +1,26 @@
+{
+    "season": "1889-90",
+    "prev": "1888-89",
+    "next": "1890-91",
+    "division_a": [
+        {"division":"A","place":1,"club":{"country":"DNK","id":"akmsk","name":"Akademisk Boldklub"},"flags":{"winner":true,"new_club":true,"domestic_champion":true},"p":6,"w":6,"d":0,"l":0,"f":32,"a":4,"pts":18,"gd":28,"f_p":5.33,"a_p":0.67,"win_percent":1,"gd_p":4.67,"pts_p":3},
+		{"division":"A","place":2,"club":{"country":"DNK","id":"kjobenhavns_boldklub","name":"Kjøbenhavns Boldklub"},"flags":{"new_club":true},"p":6,"w":5,"d":0,"l":1,"f":27,"a":4,"pts":15,"gd":23,"f_p":4.5,"a_p":0.67,"win_percent":0.83,"gd_p":3.83,"pts_p":2.5},
+		{"division":"A","place":3,"club":{"country":"ENG","id":"prstn","name":"Preston North End"},"flags":{"domestic_champion":true},"p":22,"w":15,"d":3,"l":4,"f":71,"a":30,"pts":48,"gd":41,"f_p":3.23,"a_p":1.36,"win_percent":0.68,"gd_p":1.86,"pts_p":2.18},
+		{"division":"A","place":4,"club":{"country":"ENG","id":"Everton_F.C.","name":"Everton"},"p":22,"w":14,"d":3,"l":5,"f":65,"a":40,"pts":45,"gd":25,"f_p":2.95,"a_p":1.82,"win_percent":0.64,"gd_p":1.14,"pts_p":2.05},
+		{"division":"A","place":5,"club":{"country":"DNK","id":"Melchioraner_Boldklubben","name":"Melchioraner Boldklubben"},"flags":{"new_club":true},"p":6,"w":4,"d":0,"l":2,"f":23,"a":12,"pts":12,"gd":11,"f_p":3.83,"a_p":2,"win_percent":0.67,"gd_p":1.83,"pts_p":2},
+		{"division":"A","place":6,"club":{"country":"ENG","id":"Blackburn_Rovers_F.C.","name":"Blackburn Rovers"},"p":22,"w":12,"d":3,"l":7,"f":78,"a":41,"pts":39,"gd":37,"f_p":3.55,"a_p":1.86,"win_percent":0.55,"gd_p":1.68,"pts_p":1.77},
+		{"division":"A","place":7,"club":{"country":"ENG","id":"West_Bromwich_Albion_F.C.","name":"West Bromwich Albion"},"p":22,"w":11,"d":3,"l":8,"f":47,"a":50,"pts":36,"gd":-3,"f_p":2.14,"a_p":2.27,"win_percent":0.5,"gd_p":-0.14,"pts_p":1.64},
+		{"division":"A","place":8,"club":{"country":"ENG","id":"Wolverhampton_Wanderers_F.C.","name":"Wolverhampton Wanderers"},"p":22,"w":10,"d":5,"l":7,"f":51,"a":38,"pts":35,"gd":13,"f_p":2.32,"a_p":1.73,"win_percent":0.45,"gd_p":0.59,"pts_p":1.59},
+		{"division":"A","place":9,"club":{"country":"ENG","id":"Accrington_F.C.","name":"Accrington"},"p":22,"w":9,"d":6,"l":7,"f":53,"a":56,"pts":33,"gd":-3,"f_p":2.41,"a_p":2.55,"win_percent":0.41,"gd_p":-0.14,"pts_p":1.5},
+		{"division":"A","place":10,"club":{"country":"DNK","id":"Boldklubben_Haabet","name":"Boldklubben Haabet"},"flags":{"new_club":true},"p":6,"w":3,"d":0,"l":3,"f":6,"a":12,"pts":9,"gd":-6,"f_p":1,"a_p":2,"win_percent":0.5,"gd_p":-1,"pts_p":1.5},
+		{"division":"A","place":11,"club":{"country":"ENG","id":"Derby_County_F.C.","name":"Derby County"},"p":22,"w":9,"d":3,"l":10,"f":43,"a":55,"pts":30,"gd":-12,"f_p":1.95,"a_p":2.5,"win_percent":0.41,"gd_p":-0.55,"pts_p":1.36},
+		{"division":"A","place":12,"club":{"country":"ENG","id":"Bolton_Wanderers_F.C.","name":"Bolton Wanderers"},"p":22,"w":9,"d":1,"l":12,"f":54,"a":65,"pts":28,"gd":-11,"f_p":2.45,"a_p":2.95,"win_percent":0.41,"gd_p":-0.5,"pts_p":1.27},
+		{"division":"A","place":13,"club":{"country":"ENG","id":"Aston_Villa_F.C.","name":"Aston Villa"},"p":22,"w":7,"d":5,"l":10,"f":43,"a":51,"pts":26,"gd":-8,"f_p":1.95,"a_p":2.32,"win_percent":0.32,"gd_p":-0.36,"pts_p":1.18},
+		{"division":"A","place":14,"club":{"country":"ENG","id":"Notts_County_F.C.","name":"Notts County"},"p":22,"w":6,"d":5,"l":11,"f":43,"a":51,"pts":23,"gd":-8,"f_p":1.95,"a_p":2.32,"win_percent":0.27,"gd_p":-0.36,"pts_p":1.05},
+		{"division":"A","place":15,"club":{"country":"DNK","id":"boldklubben_frem","name":"Boldklubben Frem"},"flags":{"new_club":true},"p":6,"w":2,"d":0,"l":4,"f":14,"a":11,"pts":6,"gd":3,"f_p":2.33,"a_p":1.83,"win_percent":0.33,"gd_p":0.5,"pts_p":1},
+		{"division":"A","place":16,"club":{"country":"ENG","id":"Burnley_F.C.","name":"Burnley"},"p":22,"w":4,"d":5,"l":13,"f":36,"a":65,"pts":17,"gd":-29,"f_p":1.64,"a_p":2.95,"win_percent":0.18,"gd_p":-1.32,"pts_p":0.77},
+		{"division":"A","place":17,"club":{"country":"ENG","id":"Stoke_City_F.C.","name":"Stoke"},"flags":{"removed":true},"p":22,"w":3,"d":4,"l":15,"f":27,"a":69,"pts":13,"gd":-42,"f_p":1.23,"a_p":3.14,"win_percent":0.14,"gd_p":-1.91,"pts_p":0.59},
+		{"division":"A","place":18,"club":{"country":"DNK","id":"Østerbro_Boldklub_(1887-1893)","name":"Østerbro Boldklub"},"flags":{"new_club":true},"p":6,"w":1,"d":0,"l":5,"f":7,"a":26,"pts":3,"gd":-19,"f_p":1.17,"a_p":4.33,"win_percent":0.17,"gd_p":-3.17,"pts_p":0.5},
+		{"division":"A","place":19,"club":{"country":"DNK","id":"Christianshavn_Boldklub","name":"Christianshavn Boldklub"},"flags":{"new_club":true,"removed":true},"p":6,"w":0,"d":0,"l":6,"f":4,"a":44,"pts":0,"gd":-40,"f_p":0.67,"a_p":7.33,"win_percent":0,"gd_p":-6.67,"pts_p":0}
+    ]
+}
