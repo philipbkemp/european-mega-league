@@ -122,7 +122,7 @@ function makeIcon(code) {
     img = $("<IMG />")
         .attr("src","assets/"+code+".png")
         .attr("alt",altText)
-        .attr("data-bs-toggle","tootlip")
+        .attr("data-bs-toggle","tooltip")
         .attr("data-bs-title",altText)
         ;
 
