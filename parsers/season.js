@@ -20,9 +20,10 @@ $(document).ready(function(){
 
 });
 
+thisSeasonData = {};
 function parseSeason(data) {
 
-    console.log(data);
+    thisSeasonData = data;
 
     setTitles([],data.season);
 
