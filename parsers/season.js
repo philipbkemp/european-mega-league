@@ -65,7 +65,7 @@ function handleDiv(id,teams) {
                 console.error("club",ck);
             }
         });
-        supportedFlagKeys = ["new_club","winner","domestic_champion"];
+        supportedFlagKeys = ["new_club","winner","domestic_champion","removed"];
         Object.keys(team.flags).forEach(fk=>{
             if ( ! supportedFlagKeys.includes(fk) ) {
                 console.error("flags",fk);
@@ -116,6 +116,7 @@ function makeIcon(code) {
     altText = "";
     switch (code) {
         case "new":     altText = "New Club"; break;
+        case "removed": altText = "Relegated from Top Flight"; break;
         case "trophy":  altText = "Domestic Champions"; break;
         default:        altText = code; break;
     }
