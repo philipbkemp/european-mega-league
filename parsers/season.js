@@ -85,10 +85,10 @@ function handleDiv(id,teams) {
         ));
 
         thisTeamName =  $("<TH></TH>").attr("scope","row").html(team.club.name);
-        if ( flags.new_club ) {
+        if ( team.flags.new_club ) {
             thisTeamName.append( makeIcon("new") );
         }
-        if ( flags.domestic_champion ) {
+        if ( team..domestic_champion ) {
             thisTeamName.append( makeIcon("trophy") );
         }
         thisTeam.append(thisTeamName);
