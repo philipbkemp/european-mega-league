@@ -65,12 +65,14 @@ function handleDiv(id,teams) {
                 console.error("club",ck);
             }
         });
-        supportedFlagKeys = ["new_club","winner","domestic_champion","removed"];
-        Object.keys(team.flags).forEach(fk=>{
-            if ( ! supportedFlagKeys.includes(fk) ) {
-                console.error("flags",fk);
-            }
-        });
+        if (team.flags) {
+            supportedFlagKeys = ["new_club","winner","domestic_champion","removed"];
+            Object.keys(team.flags).forEach(fk=>{
+                if ( ! supportedFlagKeys.includes(fk) ) {
+                    console.error("flags",fk);
+                }
+            });
+        }
 
         thisTeam = $("<TR></TR>").attr("id",team.club.id);
 
