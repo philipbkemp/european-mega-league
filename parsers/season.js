@@ -88,7 +88,7 @@ function handleDiv(id,teams) {
         if ( team.flags.new_club ) {
             thisTeamName.append( makeIcon("new") );
         }
-        if ( team..domestic_champion ) {
+        if ( team.flags.domestic_champion ) {
             thisTeamName.append( makeIcon("trophy") );
         }
         thisTeam.append(thisTeamName);
