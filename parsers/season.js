@@ -64,7 +64,7 @@ function handleDiv(id,teams) {
                 console.error("club",ck);
             }
         });
-        supportedFlagKeys = [];
+        supportedFlagKeys = ["new_club","winner","domestic_champion"];
         Object.keys(team.flags).forEach(fk=>{
             if ( ! supportedFlagKeys.includes(fk) ) {
                 console.error("flags",fk);
@@ -84,7 +84,14 @@ function handleDiv(id,teams) {
                 .attr("data-bs-title",thisTeamCountry)
         ));
 
-        thisTeam.append( $("<TH></TH>").attr("scope","row").html(team.club.name) );
+        thisTeamName =  $("<TH></TH>").attr("scope","row").html(team.club.name);
+        if ( flags.new_club ) {
+            thisTeamName.append( makeIcon("new") );
+        }
+        if ( flags.domestic_champion ) {
+            thisTeamName.append( makeIcon("trophy") );
+        }
+        thisTeam.append(thisTeamName);
 
         thisTeam.append( $("<TD></TD>").html(team.p) );
         thisTeam.append( $("<TD></TD>").html(team.w) );
@@ -102,4 +109,22 @@ function handleDiv(id,teams) {
 
         $("tbody#league_"+id).append(thisTeam);
     });
+}
+
+function makeIcon(code) {
+    altText = "";
+    switch (code) {
+        case "new":     altText = "New Club"; break;
+        case "trophy":  altText = "Domestic Champions"; break;
+        default:        altText = code; break;
+    }
+            
+    img = $("<IMG />")
+        .attr("src","assets/"+code+".png")
+        .attr("alt",altText)
+        .attr("data-bs-toggle","tootlip")
+        .attr("data-bs-title",altText)
+        ;
+
+    return img;
 }
