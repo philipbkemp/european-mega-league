@@ -88,16 +88,18 @@ function handleDiv(id,teams) {
         ));
 
         thisTeamName =  $("<TH></TH>").attr("scope","row").html(team.club.name);
-        if ( team.flags.new_club ) {
-            thisTeamName.append( makeIcon("new") );
-        }
-        if ( team.flags.domestic_champion ) {
-            thisTeamName.append( makeIcon("trophy") );
-            thisTeam.addClass("is-domestic_champion");
-        }
-        if ( team.flags.removed ) {
-            thisTeamName.append( makeIcon("removed") );
-            thisTeam.addClass("is-removed");
+        if ( team.flags) {
+            if ( team.flags.new_club ) {
+                thisTeamName.append( makeIcon("new") );
+            }
+            if ( team.flags.domestic_champion ) {
+                thisTeamName.append( makeIcon("trophy") );
+                thisTeam.addClass("is-domestic_champion");
+            }
+            if ( team.flags.removed ) {
+                thisTeamName.append( makeIcon("removed") );
+                thisTeam.addClass("is-removed");
+            }
         }
         thisTeam.append(thisTeamName);
 
