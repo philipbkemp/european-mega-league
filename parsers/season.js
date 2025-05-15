@@ -93,6 +93,11 @@ function handleDiv(id,teams) {
         }
         if ( team.flags.domestic_champion ) {
             thisTeamName.append( makeIcon("trophy") );
+            thisTeam.addClass("is-domestic_champion");
+        }
+        if ( team.flags.removed ) {
+            thisTeamName.append( makeIcon("removed") );
+            thisTeam.addClass("is-removed");
         }
         thisTeam.append(thisTeamName);
 
