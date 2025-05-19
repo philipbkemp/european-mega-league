@@ -53,7 +53,7 @@ function parseSeason(data) {
 
 function handleDiv(id,teams) {
     teams.forEach(team=>{
-        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags"]
+        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags","deduct","info"]
         Object.keys(team).forEach(k=>{
             if ( ! supportedKeys.includes(k) ) {
                 console.error(k);
@@ -116,7 +116,9 @@ function handleDiv(id,teams) {
             }
             thisTeamName.append( makeIcon("deduction",deductMsg) );
         }
-
+        if ( team.info ) {
+            thisTeamName.append( makeIcon("info",team.info) );
+        }
         thisTeam.append(thisTeamName);
 
         if ( team.flags && team.flags.expunged ) {
