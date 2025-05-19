@@ -51,6 +51,7 @@ function grabLeague(div) {
     out = out
         .replace('"id":"preston_north_end_fc"','"id":"prstn"')
         .replace('"id":"akademisk_boldklub"','"id":"akmsk"')
+        .replace('"id":"kjobenhavns_boldklub"','"id":"kjhvn"');
         ;
     console.log( out );
 }

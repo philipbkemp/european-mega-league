@@ -8,6 +8,6 @@
     "former": [
         {"code":"AKMSK","name":"Akademisk Boldklub","missing":true,"id":"Akademisk_Boldklub"},
         {"code":"BKFRM","name":"Boldklubben Frem","missing":true},
-        {"code":"KJHVN","name":"Kjøbenhavns Boldklub","missing":true}
+        {"code":"KJHVN","name":"Kjøbenhavns Boldklub","missing":true,"id":"Kjøbenhavns_Boldklub"}
     ]
 }
