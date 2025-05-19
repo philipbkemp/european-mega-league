@@ -45,6 +45,6 @@
 		{"division":"A","place":40,"club":{"country":"EIR","id":"Milford_F.C.","name":"Milford"},"flags":{"new_club":true,"removed":true},"p":14,"w":0,"d":0,"l":14,"f":10,"a":61,"pts":0,"gd":-51,"f_p":0.71,"a_p":4.36,"win_percent":0,"gd_p":-3.64,"pts_p":0},
 		{"division":"A","place":41,"club":{"country":"DNK","id":"Boldklubben_Haabet","name":"Boldklubben Haabet"},"flags":{"removed":true},"p":4,"w":0,"d":0,"l":4,"f":1,"a":18,"pts":0,"gd":-17,"f_p":0.25,"a_p":4.5,"win_percent":0,"gd_p":-4.25,"pts_p":0},
 		{"division":"A","place":42,"club":{"country":"DNK","id":"Olympia_(Denmark_football_club)","name":"Olympia"},"flags":{"new_club":true,"removed":true},"p":5,"w":0,"d":0,"l":5,"f":0,"a":33,"pts":0,"gd":-33,"f_p":0,"a_p":6.6,"win_percent":0,"gd_p":-6.6,"pts_p":0},
-		{"division":"A","place":43,"club":{"country":"SCO","id":"Renton_F.C.","name":"Renton"},"flags":{"new_club":true},"p":null,"w":null,"d":null,"l":null,"f":null,"a":null,"pts":null,"gd":null,"f_p":null,"a_p":null,"win_percent":null,"gd_p":null,"pts_p":null,"info":"Expelled from the league mid-season; Record expunged"}
+		{"division":"A","place":43,"club":{"country":"SCO","id":"Renton_F.C.","name":"Renton"},"flags":{"new_club":true,"expunged":true},"p":null,"w":null,"d":null,"l":null,"f":null,"a":null,"pts":null,"gd":null,"f_p":null,"a_p":null,"win_percent":null,"gd_p":null,"pts_p":null,"info":"Expelled from the league mid-season; Record expunged"}
     ]
 }

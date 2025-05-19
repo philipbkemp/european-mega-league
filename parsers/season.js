@@ -53,7 +53,7 @@ function parseSeason(data) {
 
 function handleDiv(id,teams) {
     teams.forEach(team=>{
-        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags"]
+        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags","info"]
         Object.keys(team).forEach(k=>{
             if ( ! supportedKeys.includes(k) ) {
                 console.error(k);
@@ -66,7 +66,7 @@ function handleDiv(id,teams) {
             }
         });
         if (team.flags) {
-            supportedFlagKeys = ["new_club","winner","domestic_champion","removed"];
+            supportedFlagKeys = ["new_club","winner","domestic_champion","removed","expunged"];
             Object.keys(team.flags).forEach(fk=>{
                 if ( ! supportedFlagKeys.includes(fk) ) {
                     console.error("flags",fk);
@@ -103,19 +103,25 @@ function handleDiv(id,teams) {
         }
         thisTeam.append(thisTeamName);
 
-        thisTeam.append( $("<TD></TD>").html(team.p) );
-        thisTeam.append( $("<TD></TD>").html(team.w) );
-        thisTeam.append( $("<TD></TD>").html(team.d) );
-        thisTeam.append( $("<TD></TD>").html(team.l) );
-        thisTeam.append( $("<TD></TD>").html(team.f) );
-        thisTeam.append( $("<TD></TD>").html(team.a) );
-        thisTeam.append( $("<TD></TD>").html(team.pts) );
-        thisTeam.append( $("<TD></TD>").html(team.gd) );
-        thisTeam.append( $("<TD></TD>").html(team.f_p.toFixed(2)) );
-        thisTeam.append( $("<TD></TD>").html(team.a_p.toFixed(2)) );
-        thisTeam.append( $("<TD></TD>").html(team.win_percent.toFixed(2)) );
-        thisTeam.append( $("<TD></TD>").html(team.gd_p.toFixed(2)) );
-        thisTeam.append( $("<TD></TD>").html(team.pts_p.toFixed(2)) );
+        if ( team.flags && team.flags.expunged ) {
+            for ( i=0 ; i!==13 ; i++ ) {
+                thisTeam.append( $("<TD></TD>").html("-") );
+            }
+        } else {
+            thisTeam.append( $("<TD></TD>").html(team.p) );
+            thisTeam.append( $("<TD></TD>").html(team.w) );
+            thisTeam.append( $("<TD></TD>").html(team.d) );
+            thisTeam.append( $("<TD></TD>").html(team.l) );
+            thisTeam.append( $("<TD></TD>").html(team.f) );
+            thisTeam.append( $("<TD></TD>").html(team.a) );
+            thisTeam.append( $("<TD></TD>").html(team.pts) );
+            thisTeam.append( $("<TD></TD>").html(team.gd) );
+            thisTeam.append( $("<TD></TD>").html(team.f_p.toFixed(2)) );
+            thisTeam.append( $("<TD></TD>").html(team.a_p.toFixed(2)) );
+            thisTeam.append( $("<TD></TD>").html(team.win_percent.toFixed(2)) );
+            thisTeam.append( $("<TD></TD>").html(team.gd_p.toFixed(2)) );
+            thisTeam.append( $("<TD></TD>").html(team.pts_p.toFixed(2)) );
+        }
 
         $("tbody#league_"+id).append(thisTeam);
     });
