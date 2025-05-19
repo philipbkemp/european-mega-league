@@ -149,6 +149,7 @@ function makeIcon(code,msg="") {
     altText = "";
     switch (code) {
         case "deduction":   altText = msg; break;
+        case "info":         altText = msg; break;
         case "new":         altText = "New Club"; break;
         case "removed":     altText = "Relegated from Top Flight"; break;
         case "trophy":      altText = "Domestic Champions"; break;
