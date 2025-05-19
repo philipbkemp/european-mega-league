@@ -53,7 +53,7 @@ function parseSeason(data) {
 
 function handleDiv(id,teams) {
     teams.forEach(team=>{
-        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags","info"]
+        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags"]
         Object.keys(team).forEach(k=>{
             if ( ! supportedKeys.includes(k) ) {
                 console.error(k);
@@ -70,6 +70,14 @@ function handleDiv(id,teams) {
             Object.keys(team.flags).forEach(fk=>{
                 if ( ! supportedFlagKeys.includes(fk) ) {
                     console.error("flags",fk);
+                }
+            });
+        }
+        if (team.deduct) {
+            supportedFlagKeys = ["points","reason"];
+            Object.keys(team.deduct).forEach(fk=>{
+                if ( ! supportedFlagKeys.includes(fk) ) {
+                    console.error("deduct",fk);
                 }
             });
         }
@@ -101,6 +109,14 @@ function handleDiv(id,teams) {
                 thisTeam.addClass("is-removed");
             }
         }
+        if ( team.deduct ) {
+            deductMsg = "Deducted " + team.deduct.points + " point" + (team.deduct.points === 1 ? '' : 's');
+            if ( team.deduct.reason ) {
+                deductMsg += "<br />" + team.deduct.reason;
+            }
+            thisTeamName.append( makeIcon("deduction",deductMsg) );
+        }
+
         thisTeam.append(thisTeamName);
 
         if ( team.flags && team.flags.expunged ) {
@@ -127,13 +143,14 @@ function handleDiv(id,teams) {
     });
 }
 
-function makeIcon(code) {
+function makeIcon(code,msg="") {
     altText = "";
     switch (code) {
-        case "new":     altText = "New Club"; break;
-        case "removed": altText = "Relegated from Top Flight"; break;
-        case "trophy":  altText = "Domestic Champions"; break;
-        default:        altText = code; break;
+        case "deduction":   altText = msg; break;
+        case "new":         altText = "New Club"; break;
+        case "removed":     altText = "Relegated from Top Flight"; break;
+        case "trophy":      altText = "Domestic Champions"; break;
+        default:            altText = code; break;
     }
             
     img = $("<IMG />")
