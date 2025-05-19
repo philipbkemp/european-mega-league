@@ -53,7 +53,7 @@ function parseSeason(data) {
 
 function handleDiv(id,teams) {
     teams.forEach(team=>{
-         supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags"]
+        supportedKeys = ["place","club","p","w","d","l","a","f","a","pts","gd","f_p","a_p","win_percent","gd_p","pts_p","division","flags"]
         Object.keys(team).forEach(k=>{
             if ( ! supportedKeys.includes(k) ) {
                 console.error(k);
