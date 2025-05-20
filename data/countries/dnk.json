@@ -6,8 +6,8 @@
         {"code":"BRNDY","name":"Brøndby IF","missing":true}
     ],
     "former": [
-        {"code":"AKMSK","name":"Akademisk Boldklub","missing":true,"id":"Akademisk_Boldklub"},
-        {"code":"BKFRM","name":"Boldklubben Frem","missing":true},
-        {"code":"KJHVN","name":"Kjøbenhavns Boldklub","missing":true,"id":"Kjøbenhavns_Boldklub"}
+        {"missing":true,"code":"AKMSK","name":"Akademisk Boldklub","id":"Akademisk_Boldklub"},
+        {"missing":true,"code":"BKFRM","name":"BK Frem","id":"Boldklubben_Frem"},
+        {"missing":true,"code":"KJHVN","name":"Kjøbenhavns Boldklub","id":"Kjøbenhavns_Boldklub"}
     ]
 }
