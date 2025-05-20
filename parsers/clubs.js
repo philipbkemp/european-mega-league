@@ -43,6 +43,7 @@ $(document).ready(function(){
 function handleClub(data) {
     setTitles(["Clubs",data.country.name],data.name);
     $("#link-clubs").removeClass("d-none");
+    $("#link-country").removeClass("d-none").html(data.country.name).attr("href","clubs.html?country="+data.country.id.toLowerCase());
 }
 
 function handleCountry(data) {
