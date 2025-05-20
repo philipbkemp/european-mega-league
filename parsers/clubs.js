@@ -4,8 +4,6 @@ $(document).ready(function(){
 
 	if ( urlParams["country"] && urlParams["club"] ) {
 
-        console.log("TODO: NEED CLUB");
-
         $.ajax({
 			url: "data/clubs/"+urlParams["country"].toLowerCase()+"/"+urlParams["club"].toLowerCase()+".json",
 			success: function(data) {
