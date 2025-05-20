@@ -7,11 +7,9 @@ $(document).ready(function(){
         console.log("TODO: NEED CLUB");
 
         $.ajax({
-			url: "data/countries/"+urlParams["country"]+".json",
+			url: "data/clubs/"+urlParams["country"].toLowerCaase()+"/"+urlParams["club"].toLowerCase()+".json",
 			success: function(data) {
-                $("#link-clubs").removeClass("d-none");
-                setTitles(["Clubs",data.name],urlParams["club"].toUpperCase());
-                $("#show-error").removeClass("d-none");
+                handleClub(data);
 			},
             error: function(data) {
                 $("#show-error").removeClass("d-none");
@@ -25,7 +23,6 @@ $(document).ready(function(){
 			url: "data/countries/"+urlParams["country"]+".json",
 			success: function(data) {
 				handleCountry(data);
-                $("#link-clubs").removeClass("d-none");
 			},
             error: function(data) {
                 $("#show-error").removeClass("d-none");
@@ -42,6 +39,11 @@ $(document).ready(function(){
     }
 
 });
+
+function handleClub(data) {
+    setTitles(["Clubs",data.country.name],data.name);
+    $("#link-clubs").removeClass("d-none");
+}
 
 function handleCountry(data) {
     $("#active-clubs").html(data.league);
@@ -67,4 +69,5 @@ function handleCountry(data) {
         $(".club-list--active").append(clubWrap);
     });
     $("#show-country").removeClass("d-none");
+    $("#link-clubs").removeClass("d-none");
 }
