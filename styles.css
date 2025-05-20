@@ -194,7 +194,7 @@ table.winners--table#winners--country tbody tr td:last-child {
 #divisionsTables tbody tr.is-relegated > * { background-color: #ffc9c9; }
 #divisionsTables tbody th img { height: 16px; float: right; position: relative; top: 3px; right: 5px; margin-left: 5px; cursor: help; width: 16px; }
 #divisionsTables tbody th { font-weight: normal; }
-#divisionsTables tbody tr th a { font-weight: bold; }
+#divisionsTables tbody tr th a { font-weight: bold; text-decoration: none; }
 #divisionsTables tbody th a { display: inline-block; width: 75%; }
 #divisionsTables thead tr th:nth-child(n+4):nth-child(-n+15),
 #divisionsTables tbody tr td:nth-child(n+4):nth-child(-n+15){ display: none; }

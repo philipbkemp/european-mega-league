@@ -7,7 +7,7 @@ $(document).ready(function(){
         console.log("TODO: NEED CLUB");
 
         $.ajax({
-			url: "data/clubs/"+urlParams["country"].toLowerCaase()+"/"+urlParams["club"].toLowerCase()+".json",
+			url: "data/clubs/"+urlParams["country"].toLowerCase()+"/"+urlParams["club"].toLowerCase()+".json",
 			success: function(data) {
                 handleClub(data);
 			},
@@ -50,7 +50,7 @@ function handleCountry(data) {
     setTitles(["Clubs"],data.name);
     data.current.forEach(activeClub=>{
         clubWrap = $("<DIV></DIV>").addClass("col");
-        clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+activeClub.code);
+        clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+activeClub.code.toLowerCase());
         if ( activeClub.missing ) {
             clubLink.addClass("opacity-50");
         }
@@ -60,7 +60,7 @@ function handleCountry(data) {
     });
     data.former.forEach(formerClub=>{
         clubWrap = $("<DIV></DIV>").addClass("col");
-        clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+formerClub.code);
+        clubLink = $("<A></A>").addClass("btn").addClass("btn-outline-dark").addClass("w-100").attr("href","clubs.html?country="+data.country+"&club="+formerClub.code.toLowerCase());
         if ( formerClub.missing ) {
             clubLink.addClass("opacity-50");
         }

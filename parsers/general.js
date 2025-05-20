@@ -35,6 +35,10 @@ allCountries = {
     "WAL": "Wales"
 };
 
+supportedClubs = [
+    "prstn"
+];
+
 function goTootlip() {
     containers = [];
 

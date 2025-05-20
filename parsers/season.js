@@ -95,7 +95,13 @@ function handleDiv(id,teams) {
                 .attr("data-bs-title",thisTeamCountry)
         ));
 
-        thisTeamName =  $("<TH></TH>").attr("scope","row").html(team.club.name);
+        thisTeamName =  $("<TH></TH>").attr("scope","row");
+        if ( supportedClubs.includes(team.club.id) ) {
+            thisTeamName.append( $("<A></A>").html(team.club.name).attr("href","clubs.html?country="+team.club.country.toLowerCase()+"&club="+team.club.id.toLowerCase()) );
+        } else {
+            thisTeamName.html(team.club.name);
+        }
+
         if ( team.flags) {
             if ( team.flags.new_club ) {
                 thisTeamName.append( makeIcon("new") );
