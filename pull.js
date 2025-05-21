@@ -25,6 +25,9 @@ function grabLeague(div) {
                 case "trophy": rowObj.flags.domestic_champion = true; break;
                 case "new": rowObj.flags.new_club = true; break;
                 case "removed": rowObj.flags.removed = true; break;
+                case "returning": rowObj.flags.returning_club = true; break;
+                case "info": rowObj.info = f.getAttribute("alt"); break;
+                case "deduction": rowObj.deduct = {points:0,reason:f.getAttribute("alt")}; console.log("CHECK DEDUCT FOR "+rowObj.club.name); break;
                 default: console.error("Unknown flag",flag);
             }
         });

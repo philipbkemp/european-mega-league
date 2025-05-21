@@ -66,7 +66,7 @@ function handleDiv(id,teams) {
             }
         });
         if (team.flags) {
-            supportedFlagKeys = ["new_club","winner","domestic_champion","removed","expunged"];
+            supportedFlagKeys = ["new_club","winner","domestic_champion","removed","expunged","returning_club"];
             Object.keys(team.flags).forEach(fk=>{
                 if ( ! supportedFlagKeys.includes(fk) ) {
                     console.error("flags",fk);
@@ -114,6 +114,9 @@ function handleDiv(id,teams) {
                 thisTeamName.append( makeIcon("removed") );
                 thisTeam.addClass("is-removed");
             }
+            if ( team.flags.returning_club ) {
+                thisTeamName.append( makeIcon("returning") );
+            }
         }
         if ( team.deduct ) {
             deductMsg = "Deducted " + team.deduct.points + " point" + (team.deduct.points === 1 ? '' : 's');
@@ -155,9 +158,10 @@ function makeIcon(code,msg="") {
     altText = "";
     switch (code) {
         case "deduction":   altText = msg; break;
-        case "info":         altText = msg; break;
+        case "info":        altText = msg; break;
         case "new":         altText = "New Club"; break;
         case "removed":     altText = "Relegated from Top Flight"; break;
+        case "returning":   altText = "Returning Club"; break;
         case "trophy":      altText = "Domestic Champions"; break;
         default:            altText = code; break;
     }
